@@ -1,0 +1,36 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+<body>
+    <form asp-action="Index">
+        <table>
+            <tr>
+                <td><p>Person A: Age of Death</p></td>
+                <td>: <input type="number" asp-for="AgeOfDeath1"></td>
+            </tr>
+            <tr>
+                <td><p>Person A: Year of Death</p></td>
+                <td>: <input type="number" asp-for="YearOfDeath1"></td>
+            </tr>
+            <tr>
+                <td><p>Person B: Age of Death</p></td>
+                <td>: <input type="number" asp-for="AgeOfDeath2"></td>
+            </tr>
+            <tr>
+                <td><p>Person B: Year of Death</p></td>
+                <td>: <input type="number" asp-for="YearOfDeath2"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="SUBMIT" asp-for="Result"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><p>Result</p></td>
+                <td>: <input type="number" asp-for="@ViewData["Result"]"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
